@@ -65,7 +65,7 @@ The stack is used between calls to this function. This allows non-blocking expan
       if (current_depth == 0 || is_final) {
         // Final nodes get interpreted reward
         if (is_final) {
-          current_node[@MM_NODE.VALUE] = script_execute(config[MM_CONFIGS.SCR_INTERPRET_RESULT], script_execute(ruleset[RULESET.SCR_PLAYOUT_RESULT], current_state), current_stateconfig[MM_CONFIGS.ARG_INTERPRET_RESULT]);
+          current_node[@MM_NODE.VALUE] = script_execute(config[MM_CONFIGS.SCR_INTERPRET_RESULT], script_execute(ruleset[RULESET.SCR_PLAYOUT_RESULT], current_state), current_state, config[MM_CONFIGS.ARG_INTERPRET_RESULT]);
         }
         // Non-final nodes get heuristic reward
         else {
